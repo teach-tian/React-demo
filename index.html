@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- react  核心 -->
+    <script src='./react.js' ></script>
+    <!-- react-dom -->
+    <script src='./react-dom.js'></script>
+    <!-- babel  jsx es6 js -->
+    <script src='./browser.min.js'></script>
+
+
+    <style>
+     .col{
+         color:red;
+     }
+    </style>
+</head>
+<body>
+
+    <div id='app'></div>
+    
+</body>
+</html>
+
+<script>
+
+ //创建虚拟Dom
+
+ var Index=React.createElement(
+      'h1',
+       {title:'abc',id:'tit'},
+       React.createElement(
+           'p',
+           null,
+           'hello',
+           React.createElement(
+               'span',
+               {className:'col'},
+               'world'
+           )
+       )
+ )
+
+ ReactDOM.render(
+     Index,
+     document.getElementById('app')
+ )
+
+</script>

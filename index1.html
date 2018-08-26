@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src='./react.js'></script>
+    <script src='./react-dom.js'></script>
+    <script src='./browser.min.js'></script>
+    <style>
+      *{
+          padding: 0;
+          margin: 0;
+
+      }
+      ul,li{
+          list-style: none;
+      }
+      ul{
+         
+          margin: 20px;
+      }
+      #box,#pox{
+          width: 160px;
+          height: 100px;
+          padding: 5px;
+          background: orange;   
+          margin: 10px;
+      }
+    </style>
+</head>
+<body>
+    <div id='box'></div>
+    <div id="pox"></div>
+</body>
+</html>
+<script>
+
+//创建虚拟dom
+
+var Ul=React.createElement(
+    'ul',
+    null,
+    React.createElement(
+        'li',
+        null,
+        '女装/男装/内衣'
+    ),
+    React.createElement(
+        'li',
+        null,
+        '鞋靴/箱包/配件'
+    )
+
+)
+
+//将虚拟DOM渲染 到 根元素上
+
+ReactDOM.render(
+    Ul,
+    document.querySelector('#box')
+)
+
+ReactDOM.render(
+    Ul,
+    document.querySelector('#pox')
+)
+
+
+
+</script>
